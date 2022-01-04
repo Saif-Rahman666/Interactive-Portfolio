@@ -1,6 +1,9 @@
-import { Container,Box,Heading, Image, useColorModeValue } from "@chakra-ui/react"
+import { Button,Container,Box,Heading, Image, useColorModeValue, Link } from "@chakra-ui/react"
 import Section from "../components/section"
-
+import Paragraph from "../components/paragraph"
+import NextLink from 'next/link'
+import { ChevronRightIcon } from "@chakra-ui/icons"
+import { BioSection, BioYear } from "../components/bio"
 const Page = () => {
     return (<Container>
         <Box 
@@ -35,7 +38,55 @@ const Page = () => {
         </Box>
         <Section delay={0.1}>
             <Heading as="h3" variant="section-title">Work</Heading>
-            <p>Paragraph</p>
+            <Paragraph>Saif is a developer and is passionate about music and Art{' '}
+                <NextLink href="/works/inkdrop">
+                    <Link>Inkdrop</Link>
+                    </NextLink>
+                    .
+            </Paragraph>
+            <Box align="center"  my={4}>
+                <NextLink href="/works">
+                    <Button rightIcon={<ChevronRightIcon/>} colorScheme="teal">
+                        My portfolio
+                        </Button>
+                </NextLink>
+            </Box>
+        </Section>
+        <Section delay={0.2}>
+            <Heading as="h3" variant="section-title">
+                Bio
+            </Heading>
+            <BioSection>
+                <BioYear>1996</BioYear>
+                Born  in Dinajpur, Bangladesh.
+            </BioSection>
+            <BioSection>
+                <BioYear>2013</BioYear>
+                Completed the Secondary School certificate program from Dinajpur Zilla School 
+            </BioSection>
+            <BioSection>
+                <BioYear>2015</BioYear>
+                Completed the Higher Secondary School certificate program from Dinajpur Government College
+            </BioSection>
+            <BioSection>
+                <BioYear>2021</BioYear>
+                Completed the bachelor's degree in Computer Science and Engineering from North South University 
+            </BioSection>
+        </Section>
+        <Section delay={0.3}>
+            <Heading as="h3" variant="section-title">
+                I 🫀
+            </Heading>
+            <Paragraph>
+                Art, {' '}
+                <Link href="https://www.youtube.com/watch?v=7GJED8KqTB4">
+                Music, {' '}
+                </Link>
+                <Link href="https://www.youtube.com/watch?v=WlkQb70x5rs">
+                Playing Guitar, {' '}
+                </Link>
+                Networking, Web devlopment, Cybersecurity, Learning
+            </Paragraph>
         </Section>
         </Container>
     )
