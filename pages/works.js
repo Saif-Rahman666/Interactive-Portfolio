@@ -1,13 +1,13 @@
 import {Container, Heading ,SimpleGrid, Divider} from '@chakra-ui/react'
-
+import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { WorkGridItem } from '../components/grid-items'
 import thumbInkdrop from '../public/images/works/portfolioimage.png'
 import thumbWalknote from '../public/images/works/objectdet.png'
 const Works = () => {
     return(
+        <Layout>
         <Container>
-
             <Heading as="h3" fontSize={20} mb={4}>
                 Works
             </Heading>
@@ -59,6 +59,7 @@ const Works = () => {
                 </Section>
             </SimpleGrid>
         </Container>
+        </Layout>
     )
 
 }
