@@ -46,7 +46,7 @@ const VoxelDog  = () => {
                 alpha: true
             })
             renderer.setPixelRatio(window.devicePixelRatio)
-            renderer.setPixelRatio(scW,scH)
+            renderer.setSize(scW,scH)
             renderer.outputEncoding = THREE.sRGBEncoding
             container.appendChild(renderer.domElement)
             setRenderer(renderer)
@@ -115,7 +115,7 @@ const VoxelDog  = () => {
         <Box ref={refContainer}
              className='voxel-dog' 
              m="auto" 
-             at={['-20px','-60px','-120px']} 
+             mt={['-20px','-60px','-120px']} 
              mb={['-40px', '-140px','-200px']} 
              w={[280,480,640]}
              h={[280,480,640]}
@@ -130,7 +130,6 @@ const VoxelDog  = () => {
                         ml="calc(0px - var(--spinner-size)/2)" 
                         mt="calc(0px - var(--spinner-size))" />
                  )}
-            DOG!!
         </Box>
     )
 }
