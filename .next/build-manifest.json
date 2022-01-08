@@ -25,15 +25,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/works": [
+    "/posts": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/works.js"
-    ],
-    "/works/universe": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/works/universe.js"
+      "static/chunks/pages/posts.js"
     ]
   },
   "ampFirstPages": []
