@@ -2,18 +2,20 @@ import {Container, Heading ,SimpleGrid, Divider} from '@chakra-ui/react'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { WorkGridItem } from '../components/grid-items'
-import thumbInkdrop from '../public/images/works/portfolioimage.png'
+import thumbUniverse from '../public/images/works/portfolioimage.png'
 import thumbWalknote from '../public/images/works/objectdet.png'
+
 const Works = () => {
     return(
-        <Layout>
+        <Layout title="Works">
         <Container>
             <Heading as="h3" fontSize={20} mb={4}>
                 Works
             </Heading>
             <SimpleGrid column={[1,1,2]} gap={6}>
+
                 <Section>
-                    <WorkGridItem id="Universe" title="Universe" thumbnail={thumbInkdrop}>
+                    <WorkGridItem id="universe" title="Universe" thumbnail={thumbUniverse}>
                         An animated interactive portfolio 
                     </WorkGridItem>
                 </Section>

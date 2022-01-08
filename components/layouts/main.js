@@ -1,6 +1,4 @@
 import Head  from "next/head";
-import { Router } from "next/router";
-import { Children } from "react";
 import Navbar from '../navbar.js'
 import { Box , Container} from "@chakra-ui/react";
 import VoxelDog from "../voxel-dog.js";
