@@ -46,15 +46,15 @@ const Page = () => {
         </Box>
         <Section delay={0.1}>
             <Heading as="h3" variant="section-title">Work</Heading>
-            <Paragraph>Saif is a developer and is passionate about music and Art{' '}
-                <NextLink href="/works/inkdrop">
-                    <Link>Inkdrop</Link>
+            <Paragraph>Saif is a full-stack developer and is passionate about Music , Art &{' '}
+                <NextLink href="/works/universe">
+                    <Link>Learning</Link>
                     </NextLink>
                     .
             </Paragraph>
             <Box align="center"  my={4}>
                 <NextLink href="/works">
-                    <Button rightIcon={<ChevronRightIcon/>} colorScheme="teal">
+                    <Button rightIcon={<ChevronRightIcon/>} colorScheme="orange">
                         My portfolio
                         </Button>
                 </NextLink>
@@ -135,6 +135,13 @@ const Page = () => {
                     My YouTube channel
                 </GridItem>
             </SimpleGrid>
+            <Box align="center" my={4}>
+          <NextLink href="/posts">
+            <Button rightIcon={<ChevronRightIcon />} colorScheme="orange">
+              Popular posts
+            </Button>
+          </NextLink>
+        </Box>
         </Section>
         </Container>
         </Layout>
