@@ -19,7 +19,7 @@ const Page = () => {
             bg={useColorModeValue('whiteAlpha.500','whiteAlpha.200')} 
             p={3} mb={6} 
             align="center">
-        Hello, I'm a full-stack developer based in Bangldesh!
+        Hello, I'm a full-stack developer based in Bangladesh!
         </Box>
         <Box display={{md:'flex'}}>
             <Box flexGrow={1}>
