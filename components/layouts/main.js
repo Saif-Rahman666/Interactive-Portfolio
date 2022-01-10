@@ -9,9 +9,9 @@ const Main =({children,router}) => {
     return(
         <Box as="main" pb={8}>
             <Head>
-                <meta name="viewport" content="width=device-width, initail-scale=1"/>
+                <meta name="viewport" content="width=device-width, initial-scale=1"/>
                 <title>Saif Rahman - Homepage</title>
-                <link rel="icon" type="image/svg+xml" href="logo.png"/>
+                <link rel="icon" href="logo.png"/>
             </Head>
             <Navbar path={router.asPath}/>
             <Container maxW="container.md" pt={14}>
