@@ -11,7 +11,7 @@ const Main =({children,router}) => {
             <Head>
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
                 <title>Saif Rahman - Homepage</title>
-                <link rel="icon" href="logo.png"/>
+                <link rel="icon" type="image/svg+xml" href="Icon.png"/>
             </Head>
             <Navbar path={router.asPath}/>
             <Container maxW="container.md" pt={14}>
