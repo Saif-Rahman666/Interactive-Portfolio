@@ -16,15 +16,19 @@ import{
 }   from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
 import ThemeToggoleButton from "./theme-toggle-button.js";
-const LinkItem = ({href, path, children}) => {
+import { IoLogoGithub } from 'react-icons/io5'
+
+const LinkItem = ({href, path, children, _target, ...props}) => {
     const active = path === href
     const inactiveColor = useColorModeValue('gray200', 'whiteAlpha.900')
     return(
-        <NextLink href={href}>
+        <NextLink href={href} passHref>
             <Link
             p={2}
             bg={active ? 'orange': undefined}
-            color={active ? '#202023': inactiveColor}>
+            color={active ? '#202023': inactiveColor}
+            _target={_target}
+            {...props}>
                 {children}
             </Link>
         </NextLink>
@@ -68,13 +72,25 @@ const Navbar = props => {
                 </LinkItem>
                 <LinkItem href="/posts" path={path}>
                     Posts
-                    </LinkItem>    
+                    </LinkItem> 
+                    <LinkItem
+                        _target="_blank"
+                        href="https://github.com/Saif-Rahman666/Satans-Portfolio"
+                        path={path}
+                        display="inline-flex"
+                        alignItems="center"
+                        style={{ gap: 4 }}
+                        pl={2}
+                    >
+                        <IoLogoGithub />
+                        Source
+                    </LinkItem>   
                     </Stack>    
                     <Box flex={1} align="right">
                         <ThemeToggoleButton />
                         <Box ml={2} display={{ base: 'inline-block', md:'none'}}>
                     
-                            <Menu>
+                            <Menu isLazy id="navbar-menu">
                                 <MenuButton as={IconButton} 
                                             icon={<HamburgerIcon/>} 
                                             variant="outline" 
