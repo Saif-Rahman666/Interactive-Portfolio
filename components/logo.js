@@ -23,7 +23,7 @@ img {
 `
 
 const Logo = () => {
-    const footPrintImg = `/images/footprint${useColorModeValue('', '-dark')}.png`
+    const footPrintImg = `/images/lg${useColorModeValue('', '-dark')}.png`
     return(
         <Link href="/">
             <a>
