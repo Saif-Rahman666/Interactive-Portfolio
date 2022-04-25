@@ -4,6 +4,7 @@ import Section from '../components/section'
 import { WorkGridItem } from '../components/grid-items'
 import thumbUniverse from '../public/images/works/portfolioimage.png'
 import thumbWalknote from '../public/images/works/objectdet.png'
+import thumbHome from '../public/images/works/homemade.png'
 
 const Works = () => {
     return(
@@ -13,6 +14,11 @@ const Works = () => {
                 Works
             </Heading>
             <SimpleGrid column={[1,1,2]} gap={6}>
+            <Section>
+                    <WorkGridItem id="homemade" title="Home Made" thumbnail={thumbHome}>
+                        A real estate website where you can buy and rent houses 
+                    </WorkGridItem>
+                </Section>
 
                 <Section>
                     <WorkGridItem id="universe" title="Universe" thumbnail={thumbUniverse}>
