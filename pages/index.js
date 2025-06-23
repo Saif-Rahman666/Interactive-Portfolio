@@ -80,6 +80,14 @@ const Page = () => {
                 <BioYear>2021</BioYear>
                 Completed the bachelor's degree in Computer Science and Engineering from North South University 
             </BioSection>
+            <BioSection>
+                <BioYear>2021</BioYear>
+                Joined as a software engineer Intern at <Link href="https://www.zlothing.com/listings/dhaka-knitting-ltd/">Dhaka Knitting Ltd.</Link>
+            </BioSection>
+            <BioSection>
+                <BioYear>2022</BioYear>
+                Joined as a software engineer at <Link href="https://www.linkedin.com/company/coppanet-ltd/posts/?feedView=all">Coppanet Ltd.</Link>
+            </BioSection>
         </Section>
         <Section delay={0.3}>
             <Heading as="h3" variant="section-title">

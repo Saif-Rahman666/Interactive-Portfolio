@@ -5,6 +5,7 @@ import { WorkGridItem } from '../components/grid-items'
 import thumbUniverse from '../public/images/works/portfolioimage.png'
 import thumbWalknote from '../public/images/works/objectdet.png'
 import thumbHome from '../public/images/works/homemade.png'
+import thumbSoowgood from '../public/images/works/Soowgood.png'
 
 const Works = () => {
     return(
@@ -14,6 +15,12 @@ const Works = () => {
                 Works
             </Heading>
             <SimpleGrid column={[1,1,2]} gap={6}>
+
+            <Section>
+                    <WorkGridItem id="soowgood" title="SoowGood" thumbnail={thumbSoowgood}>
+                        All in One Healthcare Website 
+                    </WorkGridItem>
+                </Section>
             <Section>
                     <WorkGridItem id="homemade" title="Home Made" thumbnail={thumbHome}>
                         A real estate website where you can buy and rent houses 
