@@ -8,7 +8,7 @@ function easeOutCirc(x){
     return Math.sqrt(1 - Math.pow(x-1,4))
 }
 
-const VoxelDog  = () => {
+const VoxelDesk = () => {
     const refContainer = useRef()
     const [loading,setLoading] = useState(true)
     const [renderer, setRenderer] = useState()
@@ -69,10 +69,20 @@ const VoxelDog  = () => {
                 controls.target = target
                 setControls(controls)
 
-                loadGLTFModel(scene, '/dog.glb', {
+                loadGLTFModel(scene, '/desk.glb', {
                     receiveShadow: false,
                     castShadow:false
-                }).then(()=>{
+                }).then((obj)=>{
+                    // This model is authored about 0.23 units wide, where the
+                    // previous one was ~5, so measure it and fit it to the frame
+                    // instead of hard-coding a scale.
+                    const box = new THREE.Box3().setFromObject(obj)
+                    const size = box.getSize(new THREE.Vector3())
+                    const centre = box.getCenter(new THREE.Vector3())
+                    const fit = 6.5 / Math.max(size.x, size.y, size.z)
+                    obj.scale.setScalar(fit)
+                    obj.position.sub(centre.multiplyScalar(fit))
+                    obj.position.add(target)
                     animate()
                     setLoading(false)
                 })
@@ -112,7 +122,7 @@ const VoxelDog  = () => {
     
     return(
         <Box ref={refContainer}
-             className='voxel-dog' 
+             className='voxel-desk' 
              m="auto" 
              mt={['-20px','-60px','-120px']} 
              mb={['-40px', '-140px','-200px']} 
@@ -132,4 +142,4 @@ const VoxelDog  = () => {
         </Box>
     )
 }
-export default VoxelDog
+export default VoxelDesk

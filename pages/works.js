@@ -6,6 +6,8 @@ import thumbUniverse from '../public/images/works/portfolioimage.png'
 import thumbWalknote from '../public/images/works/objectdet.png'
 import thumbHome from '../public/images/works/homemade.png'
 import thumbSoowgood from '../public/images/works/Soowgood.png'
+import thumbIiot from '../public/images/works/iiot.png'
+import thumbBerserk from '../public/images/works/berserk.png'
 
 const Works = () => {
     return(
@@ -30,6 +32,16 @@ const Works = () => {
                 <Section>
                     <WorkGridItem id="universe" title="Universe" thumbnail={thumbUniverse}>
                         An animated interactive portfolio 
+                    </WorkGridItem>
+                </Section>
+                <Section>
+                    <WorkGridItem id="iiot" title="Industrial IoT Predictive Maintenance" thumbnail={thumbIiot}>
+                        LSTM and autoencoder models predicting machine failure from sensor streams, running on a Raspberry Pi over MQTT with a Flutter front end.
+                    </WorkGridItem>
+                </Section>
+                <Section>
+                    <WorkGridItem id="berserk-vr" title="Berserk VR" thumbnail={thumbBerserk}>
+                        A Unity OpenXR experience built around physical feedback &mdash; haptics, hand tracking, and a live bridge to external hardware.
                     </WorkGridItem>
                 </Section>
                 <Section>

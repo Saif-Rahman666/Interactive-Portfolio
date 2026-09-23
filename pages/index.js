@@ -19,14 +19,14 @@ const Page = () => {
             bg={useColorModeValue('whiteAlpha.500','whiteAlpha.200')} 
             p={3} mb={6} 
             align="center">
-        Hello, I&apos;m a full-stack developer based in Bangladesh!
+        Hello, I&apos;m a full-stack developer and founder based in Stockholm, Sweden!
         </Box>
         <Box display={{md:'flex'}}>
             <Box flexGrow={1}>
                 <Heading as="h2" variant="page-title">
                     Saif Rahman
                 </Heading>
-        <p>Digital Craftsman(Artist/Developer/Designer)</p>        
+        <p>From schema to storefront</p>        
         </Box>
         <Box 
             flexShrink={0} 
@@ -46,7 +46,10 @@ const Page = () => {
         </Box>
         <Section delay={0.1}>
             <Heading as="h3" variant="section-title">Work</Heading>
-            <Paragraph>Saif is a full-stack developer and is passionate about Music , Art &{' '}
+            <Paragraph>Saif is a full-stack engineer and the founder of Green Loop AB, where he is
+                building <Link href="https://noksha.se" target="_blank">Noksha</Link> &mdash; a
+                marketplace for second-hand South Asian clothing. He works across Go, Flutter and
+                AWS, and is passionate about Music, Art &{' '}
                 <NextLink href="/works/universe">
                     <Link>Learning</Link>
                     </NextLink>
@@ -87,6 +90,14 @@ const Page = () => {
             <BioSection>
                 <BioYear>2022</BioYear>
                 Joined as a software engineer at <Link href="https://www.linkedin.com/company/coppanet-ltd/posts/?feedView=all">Coppanet Ltd.</Link>
+            </BioSection>
+            <BioSection>
+                <BioYear>2025</BioYear>
+                Began an M.Sc. in Computer &amp; Systems Sciences at <Link href="https://www.su.se/department-of-computer-and-systems-sciences/" target="_blank">Stockholm University (DSV)</Link>
+            </BioSection>
+            <BioSection>
+                <BioYear>2026</BioYear>
+                Founded <Link href="https://greenloop.nu" target="_blank">Green Loop AB</Link> in Stockholm and began building Noksha
             </BioSection>
         </Section>
         <Section delay={0.3}>
